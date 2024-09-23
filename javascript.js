@@ -7,6 +7,9 @@ for (let i = 0; i < 16; i++) {
     for (let i = 0; i < 16; i++) {
         const square = document.createElement("div")
         square.setAttribute("style", "background-color: black; min-width: 42px; min-height: 42px;")
+        square.addEventListener("mouseenter", ()=> {
+            square.style.backgroundColor = "red"
+        })
         innerContainer.appendChild(square)
     }
     container.appendChild(innerContainer)
