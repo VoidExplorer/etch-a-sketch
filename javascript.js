@@ -19,12 +19,21 @@ function resetGrid(gridSize = 16) {
             const square = document.createElement("div")
             square.setAttribute("style", "background-color: lightgray; border: solid; border-color: white; border-width: 1px; flex-grow: 1")
             square.addEventListener("mouseenter", ()=> {
-                square.style.backgroundColor = "red"
+                square.style.backgroundColor = getRandomColor()
             })
             innerContainer.appendChild(square)
         }
         container.appendChild(innerContainer)
     }
+}
+
+function getRandomColor() {
+    const letters = "0123456789ABCDEF"
+    let color = "#"
+    for (let i= 0; i<6; i++) {
+        color+=letters[Math.floor(Math.random() *16)]
+    }
+    return color
 }
 
 resetGrid()
