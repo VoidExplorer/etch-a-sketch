@@ -1,9 +1,10 @@
 .container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
-    max-width: 700px;
-    min-height: 700px;
+    max-width: 960px;
+    height: 960px;
     background-color: #E5E7EB;
     padding: 20px;
     border-radius: 12px;
