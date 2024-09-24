@@ -3,6 +3,10 @@ const resetButton = document.querySelector("#reset")
 
 resetButton.addEventListener("click", ()=> {
     const squaresCount = prompt("Enter the number of the squares (1-100)")
+    if (squaresCount > 100 || squaresCount < 1) {
+        alert("Out of range")
+        return
+    }
     container.innerHTML = ""
     resetGrid(squaresCount)
 })
